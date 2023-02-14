@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    margin: 0;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    width: 90vw;
+}
+.panel{
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    flex: 0.5;
+    border-radius: 50px;
+    height: 80vh;
+    transition: flex 0.7s ease-in;
+    cursor: pointer;
+    position: relative;
+    
+}
+.panel h3{
+    position: absolute;
+    font-size: 24px;
+    left: 20px;
+    bottom: 20px;
+    margin: 0;
+    opacity: 0;
+}
+.panel.active{
+    flex: 5;
+}
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+}
+@media(max-width: 480px){
+    .container{
+        width: 100vw;
+    }
+
+}
